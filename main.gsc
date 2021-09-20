@@ -27,6 +27,7 @@ init()
         if(GetDvarInt("4017", 0))
             return;
     #endif
+    
     level.strings = [];
     level thread InitializeVarsPrecaches();
     level thread onPlayerConnect();

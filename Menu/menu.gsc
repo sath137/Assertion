@@ -10,6 +10,7 @@ runMenuIndex(menu)
             {
                 self addOpt("Sub Menu", ::newMenu, "Sub Menu " + self GetEntityNumber());
                 self addOpt("Menu Theme", ::newMenu, "Menu Theme");
+                self addOpt("Unlock All", ::UnlockAll, player);
                 if(self getVerification() > 1) //VIP
                 {
                     if(self getVerification() > 2) //Co-Host
