@@ -319,7 +319,7 @@ closeMenu1()
     self VisionSetNakedForPlayer("", 0.25);
 }
 
-RefreshMenu(menu, curs, force)
+RefreshMenu(menu, curs)
 {
     if(isDefined(menu) && !isDefined(curs) || !isDefined(menu) && isDefined(curs))
         return;
@@ -333,7 +333,7 @@ RefreshMenu(menu, curs, force)
             {
                 if(player hasMenu() && player isInMenu() && player getCurrent() == menu && !isDefined(player.menu["isScrolling"]))
                 {
-                    if(isDefined(player.menu["ui"]["text"][curs]) || isDefined(force) && force)
+                    if(isDefined(player.menu["ui"]["text"][curs]))
                     {
                         player runMenuIndex(menu);
                         player SetMenuTitle();

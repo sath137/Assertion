@@ -10,35 +10,17 @@ MenuArrays(menu)
         self.menu["curs"] = [];
     
     self.menu["items"][menu].name = [];
-    self.menu["items"][menu].name2 = [];
     self.menu["items"][menu].func = [];
     self.menu["items"][menu].input1 = [];
     self.menu["items"][menu].input2 = [];
     self.menu["items"][menu].input3 = [];
     self.menu["items"][menu].input4 = [];
     self.menu["items"][menu].bool = [];
-    self.menu["items"][menu].slider = [];
-    self.menu["items"][menu].incslider = [];
-    self.menu["items"][menu].incslidermin = [];
-    self.menu["items"][menu].incsliderstart = [];
-    self.menu["items"][menu].incslidermax = [];
     
     if(!isDefined(self.menu_B))
         self.menu_B = [];
     if(!isDefined(self.menu_B[menu]))
         self.menu_B[menu] = [];
-    if(!isDefined(self.menu_S))
-        self.menu_S = [];
-    if(!isDefined(self.menu_S[menu]))
-        self.menu_S[menu] = [];
-    if(!isDefined(self.menu_SS))
-        self.menu_SS = [];
-    if(!isDefined(self.menu_SS[menu]))
-        self.menu_SS[menu] = [];
-    if(!isDefined(self.menu_ST))
-        self.menu_ST = [];
-    if(!isDefined(self.menu_ST[menu]))
-        self.menu_ST[menu] = [];
 }
 
 addMenu(menu, title)
