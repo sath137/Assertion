@@ -17,9 +17,17 @@
     I don't intend to simplify anything. I am just putting something out there for people to use.
 */
 
+#ifdef MP
 #include common_scripts\utility;
 #include maps\mp\_utility;
 #include maps\mp\gametypes\_hud_util;
+#endif
+
+#ifdef ZM
+#include common_scripts\utility;
+#include maps\mp\_utility;
+#include maps\mp\gametypes_zm\_hud_util;
+#endif
 
 init()
 {
@@ -53,6 +61,7 @@ onPlayerSpawned()
     for(;;)
     {
         self waittill("spawned_player");
+        
         if(isDefined(self.playerSpawned))
             continue;
         self.playerSpawned = true;
