@@ -9,7 +9,7 @@ PlayerMaxRank()
     
     MaxRankXP = Int(TableLookup(table, 0, 49, 7));
     self SetRankedPlayerData(common_scripts\utility::func_46A8(), "totalXP", MaxRankXP);
-    self iPrintln("Max Rank ^2Set");
+    self iPrintln("Max Rank ^2set");
 }
 
 UnlockAll()
