@@ -1,19 +1,21 @@
 PlayerMaxRank()
 {
     #ifdef ZM
-        table = "mp/zm_shotgun_ranktable.csv";
+        MaxRankXP = Int(TableLookup("mp/zm_shotgun_ranktable.csv", 0, 49, 7));
+        stat      = "totalXP";
     #endif
-    #ifdef mp
-        table = "mp/cp_ranktable.csv";
+    #ifdef MP
+        MaxRankXP = Int(TableLookup("mp/cp_ranktable.csv", 0, self GetRankedPlayerData(common_scripts\utility::func_46AE(), "prestige") < 10 ? 44 : 999, 7));
+        stat      = "experience";
     #endif
     
-    MaxRankXP = Int(TableLookup(table, 0, 49, 7));
-    self SetRankedPlayerData(common_scripts\utility::func_46A8(), "totalXP", MaxRankXP);
+    self SetRankedPlayerData(common_scripts\utility::func_46AE(), stat, MaxRankXP);
     self iPrintln("Max Rank ^2set");
 }
 
 UnlockAll()
 {
+    self iPrintln("Unlock All ^2Started");
     foreach(challengeRef, challengeData in level.challengeInfo) //Complete Challenges/Unlock Weapon Camos
     {
         finalTarget = 0;

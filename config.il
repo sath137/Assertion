@@ -1,1 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Project><Title>Assertion Menu Base</Title><Game>WW2</Game><Mode>ZM</Mode><Platform /><Symbols>DEBUG;EXAMPLE</Symbols></Project>
+﻿<?xml version="1.0" encoding="utf-8"?><Project><Title>Assertion Menu Base</Title><Game>WW2</Game><Mode>MP</Mode><Platform /><Symbols>DEBUG;EXAMPLE</Symbols></Project>
