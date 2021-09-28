@@ -10,7 +10,7 @@ PlayerMaxRank()
     #endif
     
     self SetRankedPlayerData(common_scripts\utility::func_46AE(), stat, MaxRankXP);
-    self iPrintln("Max Rank ^2set");
+    self iPrintln("Max Rank ^2Set");
 }
 
 UnlockAll()
@@ -44,6 +44,7 @@ UnlockAll()
             self SetRankedPlayerData(common_scripts\utility::func_46AE(), "weaponStats", weapon, "level", maxRank);
             self SetRankedPlayerData(common_scripts\utility::func_46AE(), "weaponStats", weapon, "experience", maxRankXP);
         }
+        wait .01; //Since People Seemed To Have Issues With Stats Being Set Too Fast. This Will Slow It down A lot.
     }
 
     divisions = ["infantry", "airborne", "armored", "mountain", "expeditionary", "resistance", "grenadier", "commando"];

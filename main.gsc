@@ -79,7 +79,7 @@ InitializeVarsPrecaches()
     level.AutoVerify = 0;
     level.MenuStatus = StrTok("None,Verified,VIP,Co-Host,Admin,Host", ",");
     level.colorNames = StrTok("Red,Blue,Purple,Green,Yellow,Orange", ",");
-    level.colors     = StrTok("175,0,0,0,0,255,100,0,255,0,175,0,215,215,0,255,155,0", ",");
+    level.colors     = StrTok("255,0,0,0,0,255,100,0,255,0,175,0,215,215,0,255,155,0", ",");
 }
 
 playerSetup()
