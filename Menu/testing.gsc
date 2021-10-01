@@ -29,6 +29,7 @@ UnlockAll()
         
         self SetRankedPlayerData(common_scripts\utility::func_46AE(), "challengeProgress", challengeRef, finalTarget);
         self SetRankedPlayerData(common_scripts\utility::func_46AE(), "challengeState", challengeRef, finalTier);
+        wait .01;
     }
     
     #ifdef MP
@@ -43,8 +44,9 @@ UnlockAll()
             self SetRankedPlayerData(common_scripts\utility::func_46AE(), "weaponStats", weapon, "prestigeLevel", 5);
             self SetRankedPlayerData(common_scripts\utility::func_46AE(), "weaponStats", weapon, "level", maxRank);
             self SetRankedPlayerData(common_scripts\utility::func_46AE(), "weaponStats", weapon, "experience", maxRankXP);
+            
+            wait .01; //Since People Seemed To Have Issues With Stats Being Set Too Fast. This Will Slow It down A lot.
         }
-        wait .01; //Since People Seemed To Have Issues With Stats Being Set Too Fast. This Will Slow It down A lot.
     }
 
     divisions = ["infantry", "airborne", "armored", "mountain", "expeditionary", "resistance", "grenadier", "commando"];
